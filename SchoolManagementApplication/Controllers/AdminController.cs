@@ -10,15 +10,15 @@ namespace SchoolManagementApplication.Controllers
     {
         public IActionResult getStudentDetails()
         {
-            StudentDetailsAccess studentDetailsAccess = new StudentDetailsAccess();
+            StudentDetailsBAL studentDetailsBusiness = new StudentDetailsBAL();
             List<StudentDetailsModel> studentDetails = new List<StudentDetailsModel>();
             
 
-            studentDetails = studentDetailsAccess.GetStudentDetails();
+            studentDetails = studentDetailsBusiness.GetStudentDetails();
 
             /*This code is for grtting dropdown details*/
             List<StudentDetailsForDropdown> student = new List<StudentDetailsForDropdown>();
-            student = studentDetailsAccess.GetStudentDetailsForDropdown();
+            student = studentDetailsBusiness.GetStudentDetailsForDropdown();
             ViewBag.studentList = new SelectList(student, "student_registration_Id", "student_name");
             /*code for grtting dropdown details ends*/
 

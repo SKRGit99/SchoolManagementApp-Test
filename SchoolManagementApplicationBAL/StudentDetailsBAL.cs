@@ -9,7 +9,7 @@ using SchoolManagementApplicationDAL.Repository;
 
 namespace SchoolManagementApplicationBAL
 {
-    public class StudentDetailsAccess
+    public class StudentDetailsBAL
     {
        IStudentDetails stdet = new StudentDetailsRepo();
         public List<StudentDetailsModel> GetStudentDetails()
